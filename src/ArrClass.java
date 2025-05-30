@@ -44,10 +44,10 @@ public class ArrClass {
                 minIndex = localMinIndex;
             }
             threadCount++;
-            if (threadCount == threadNum) {
-                synchronized (this) {
-                    notify();
-                }
+        }
+        if (threadCount == threadNum) {
+            synchronized (this) {
+                notify();
             }
         }
     }
